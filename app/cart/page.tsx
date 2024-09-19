@@ -57,76 +57,74 @@ export default function Cart() {
   }
 
   return (
-    <div>
-      <main>
-        {
-          Boolean(cartItems.length) ? 
-          (
-            <div className={styles.itemsContainer}>
-              <h2>
-                Cart items:
-              </h2>
-              <div>
-                {
-                  cartItems.map((product: ProductType, index: number) => (
-                    <div data-test-id='e2eCartItem' key={`${product.id}_${index}`} className={styles.cartItem}>
-                      <div className={styles.imgContainer}>
-                        <Image
-                          src={product.image}
-                          alt={product.title}
-                          fill
-                          style={{ objectFit:"contain" }}
-                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        />
-                      </div>
-                      <div className={styles.titleContainer}>{product.title}</div>
-                      <div className={styles.priceContainer}>{product.price}$</div>
-                      <div className={styles.productControlsContainer}>
-                        {
-                          product.quantity > 1 && (
-                            <button onClick={() =>  onQuantityMinusClick(product)}>
-                              <Image
-                                src="/minus-icon.svg"
-                                width={20}
-                                height={20}
-                                alt="Minus icon"
-                              />
-                            </button>
-                          )
-                        }
-                        <span>{product.quantity}</span>
-                        <button onClick={() => onQuantityPlusClick(product)}>
-                          <Image
-                            src="/plus-icon.svg"
-                            width={20}
-                            height={20}
-                            alt="Plus icon"
-                          />
-                        </button>
-                      </div>
-                      <div className={styles.trashContainer}>
-                        <button onClick={() => onProductDelete(product)}>
-                            <Image
-                              src="/trash-icon.svg"
-                              width={25}
-                              height={25}
-                              alt="Trash icon"
-                            />
-                        </button>
-                      </div>
+    <main>
+      {
+        Boolean(cartItems.length) ? 
+        (
+          <div className={styles.itemsContainer}>
+            <h2>
+              Cart items:
+            </h2>
+            <div>
+              {
+                cartItems.map((product: ProductType, index: number) => (
+                  <div data-test-id='e2eCartItem' key={`${product.id}_${index}`} className={styles.cartItem}>
+                    <div className={styles.imgContainer}>
+                      <Image
+                        src={product.image}
+                        alt={product.title}
+                        fill
+                        style={{ objectFit:"contain" }}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
                     </div>
-                  ))
-                }
-              </div>
-            <div className={styles.totalContainer}>
-              <h2>Total: <span><b>{`${total.toFixed(2)}$`}</b></span></h2>
+                    <div className={styles.titleContainer}>{product.title}</div>
+                    <div className={styles.priceContainer}>{product.price}$</div>
+                    <div className={styles.productControlsContainer}>
+                      {
+                        product.quantity > 1 && (
+                          <button onClick={() =>  onQuantityMinusClick(product)}>
+                            <Image
+                              src="/minus-icon.svg"
+                              width={20}
+                              height={20}
+                              alt="Minus icon"
+                            />
+                          </button>
+                        )
+                      }
+                      <span>{product.quantity}</span>
+                      <button onClick={() => onQuantityPlusClick(product)}>
+                        <Image
+                          src="/plus-icon.svg"
+                          width={20}
+                          height={20}
+                          alt="Plus icon"
+                        />
+                      </button>
+                    </div>
+                    <div className={styles.trashContainer}>
+                      <button onClick={() => onProductDelete(product)}>
+                          <Image
+                            src="/trash-icon.svg"
+                            width={25}
+                            height={25}
+                            alt="Trash icon"
+                          />
+                      </button>
+                    </div>
+                  </div>
+                ))
+              }
             </div>
-            </div>
-          ) : (
-            <h2>No items in your cart yet!</h2>
-          )
-        }
-      </main>
-    </div>
+          <div className={styles.totalContainer}>
+            <h2>Total: <span data-testid='totalAmount'><b>{`${total.toFixed(2)}$`}</b></span></h2>
+          </div>
+          </div>
+        ) : (
+          <h2>No items in your cart yet!</h2>
+        )
+      }
+    </main>
   );
 }

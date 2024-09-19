@@ -4,6 +4,7 @@ exports[`renders a product with title, image, price and add to cart button 1`] =
 <div>
   <div
     class="productContainer"
+    data-test-id="e2eProductContainer"
   >
     <header>
       <h2>
