@@ -19,10 +19,10 @@ export default function MobileNav({ categories }: NavProps) {
       <nav>
         <button onClick={() => setIsFolded(!isFolded)}>
           <Image
-            src="/burger-icon.svg"
+            src='/burger-icon.svg'
             width={35}
             height={35}
-            alt="Mobile icon"
+            alt='Mobile icon'
           />
         </button>
         {

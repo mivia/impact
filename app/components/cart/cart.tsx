@@ -41,12 +41,12 @@ export default function Cart({ width=50, height=50}: CartProps) {
 
   return (
     <div className={styles.cartContainer}>
-      <Link href="/cart">
+      <Link href='/cart'>
         <Image
-          src="/basket-icon.svg"
+          src='/basket-icon.svg'
           width={width}
           height={height}
-          alt="Basket icon"
+          alt='Basket icon'
         />
         {
           productsCount ? (
