@@ -1,6 +1,6 @@
 import { test, expect, Page } from '@playwright/test';
 
-const APP_URL = 'http://localhost:3000/';
+const APP_URL = 'http://localhost:3000';
 
 const addItemToACart = async (page: Page) => {
   await page.goto(APP_URL);
@@ -12,10 +12,10 @@ const addItemToACart = async (page: Page) => {
   await page.goto(`${APP_URL}/cart`);
 
   const cartItems = await page.locator('data-test-id=e2eCartItem');
-  
+
   const cartItemsCount = await cartItems.count();
 
-  expect(cartItemsCount).toEqual(1);
+  await expect(cartItemsCount).toEqual(1);
 }
 
 test('adding an item to the cart', async ({ page }) => {
@@ -33,5 +33,5 @@ test('deleting an item from the cart', async ({ page }) => {
   
   const cartItemsCount = await cartItems.count();
 
-  expect(cartItemsCount).toEqual(0);
+  await expect(cartItemsCount).toEqual(0);
 });
