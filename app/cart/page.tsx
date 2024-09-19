@@ -103,6 +103,7 @@ export default function Cart() {
                         />
                       </button>
                     </div>
+                    <div className={styles.priceContainer}>{product.price * product.quantity}$</div>
                     <div className={styles.trashContainer}>
                       <button onClick={() => onProductDelete(product)}>
                           <Image
