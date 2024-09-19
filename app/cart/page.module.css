@@ -1,10 +1,15 @@
 .cartItem {
+  border-bottom: 1px solid gray;
+  padding: 10px 0;
   display: flex;
   align-items: center;
   margin-bottom: 10px;
   gap: 15px;
 }
 
+.cartItem:last-child {
+  border-bottom: none;
+}
 
 .productControls span {
   display: block;
@@ -35,7 +40,6 @@
   gap: 10px;
   align-items: center;
 }
-
 
 .titleContainer {
   flex: 3
