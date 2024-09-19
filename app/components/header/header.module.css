@@ -1,0 +1,25 @@
+.headerContainer {
+  position: relative;
+  display: flex;
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+
+.headerContainer > a {
+  z-index: 1
+}
+
+.cartContainer {
+  margin-left: auto;
+}
+
+.mobileNavContainer {
+  position: absolute;
+  width: 100%;
+}
+
+@media (max-width:961px) {
+  .cartContainer {
+    display: none;
+  }
+}

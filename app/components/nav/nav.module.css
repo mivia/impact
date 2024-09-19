@@ -1,0 +1,32 @@
+.nav {
+  flex: 1;
+}
+
+.nav h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav ul {
+  margin-top: 20px;
+}
+
+.nav ul li {
+  padding: 0 10px;
+}
+
+.nav ul li:hover {
+  background-color: #2986cc;
+  color: white
+}
+
+.nav ul li a {
+  display: block;
+  text-transform: capitalize;
+}
+
+@media (max-width:961px) {
+  .nav {
+    display: none;
+  }
+}

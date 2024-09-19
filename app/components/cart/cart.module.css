@@ -1,0 +1,19 @@
+.cartContainer {
+  position: relative;
+}
+
+.productsCountCircle {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 30px;
+  bottom: 10px;
+  width: 25px;
+  height: 25px;
+  color: white;
+  border-radius: 50px;
+  background: rgb(255, 117, 71);
+  box-shadow: rgb(183, 183, 183) 3px 3px 10px 3px;
+  transform: translate(-50%, -50%);;
+}

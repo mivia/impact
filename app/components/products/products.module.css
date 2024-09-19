@@ -1,0 +1,12 @@
+.productsContainer {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+@media (max-width:961px) {
+  .productsContainer {
+    justify-content: center;
+    padding-top: 30px;
+  }
+}
