@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
 ## Getting Started
 
-First, run the development server:
+Firstly, install all required dependencies by running:
+
+```bash
+npm i
+```
+
+Secondly, start a local server by running:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Testing
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+I have implemented e2e, component, snapshot and unit tests to test out some of the scenarios.
 
-## Learn More
+E2E tests are written using Playwright and can be run with (be sure you have local server running beforehand):
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run e2e
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Component, snapshot and unit tests are written using Jest and can be run with:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run test
+```
 
-## Deploy on Vercel
+## Extras
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+I added fetching & displaying all the available products on the home route (/) - I guess it looks better this way.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Things I haven't done due to time limit
+1) A more verbose and clear persistance layer for the cart items (https://zustand.docs.pmnd.rs/integrations/persisting-store-data)
+2) Implementation of loading templates aka loading.js (https://nextjs.org/docs/app/building-your-application/routing/loading-ui-and-streaming)
+3) More tests
+4) Few design changes that would make the shop even more appealing!
