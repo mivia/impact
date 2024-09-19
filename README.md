@@ -38,5 +38,6 @@ I added fetching & displaying all the available products on the home route (/) -
 1) A more verbose and clear persistance layer for the cart items (https://zustand.docs.pmnd.rs/integrations/persisting-store-data)
 2) Implementation of loading templates aka loading.js (https://nextjs.org/docs/app/building-your-application/routing/loading-ui-and-streaming)
 3) Implement an onOutsideClick hook that would enable me to close the mobile navigation to close in all needed scenarios
-4) Adjust the currency to users locale data
+4) Integrate the tests with Github Actions
 5) Few design changes that would make the shop even more appealing!
+6) Even more tests
