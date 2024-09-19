@@ -9,12 +9,13 @@ import styles from './page.module.css';
 
 export default function Cart() {
   const [total, setTotal] = useState(0);
-  const [cartItems, setCartItems] = useState(() => {
-    if (localStorage) {
-      const cartItems = localStorage.getItem('cart') || '[]';
-      return JSON.parse(cartItems);
-    }
-  });
+  const [cartItems, setCartItems] = useState<ProductType[]>([]);
+
+  useEffect(() => {
+    const cartItems = localStorage.getItem('cart') || '[]';
+
+    setCartItems(JSON.parse(cartItems));
+  }, [])
 
   useEffect(() => {
     const total =  cartItems.reduce((acc: number, item: ProductType) => {
@@ -26,7 +27,9 @@ export default function Cart() {
 
   const saveProducts = (products: ProductType[]) => {
     setCartItems([...products])
+
     localStorage.setItem('cart', JSON.stringify(products))
+    
     window.dispatchEvent(new Event('storage'))
   }
 

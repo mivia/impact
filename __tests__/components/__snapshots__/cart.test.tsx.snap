@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Cart with a circle containing items count 1`] = `
+<div>
+  <div
+    class="cartContainer"
+  >
+    <a
+      href="/cart"
+    >
+      <img
+        alt="Basket icon"
+        data-nimg="1"
+        decoding="async"
+        height="50"
+        loading="lazy"
+        src="/basket-icon.svg"
+        style="color: transparent;"
+        width="50"
+      />
+      <div
+        class="productsCountCircle"
+      >
+        <b>
+          1
+        </b>
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`renders Cart without a circle containing items count 1`] = `
+<div>
+  <div
+    class="cartContainer"
+  >
+    <a
+      href="/cart"
+    >
+      <img
+        alt="Basket icon"
+        data-nimg="1"
+        decoding="async"
+        height="50"
+        loading="lazy"
+        src="/basket-icon.svg"
+        style="color: transparent;"
+        width="50"
+      />
+    </a>
+  </div>
+</div>
+`;
