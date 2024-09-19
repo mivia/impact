@@ -69,7 +69,7 @@ export default function Cart() {
               <div>
                 {
                   cartItems.map((product: ProductType, index: number) => (
-                    <div key={`${product.id}_${index}`} className={styles.cartItem}>
+                    <div data-test-id='e2eCartItem' key={`${product.id}_${index}`} className={styles.cartItem}>
                       <div className={styles.imgContainer}>
                         <Image
                           src={product.image}

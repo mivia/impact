@@ -51,7 +51,7 @@ export default function Product({ product }: ProductProps) {
   }
 
   return (
-    <div className={styles.productContainer}>
+    <div data-test-id='e2eProductContainer' className={styles.productContainer}>
       <header>
         <h2>{product.title}</h2>
       </header>
