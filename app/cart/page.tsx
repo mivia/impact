@@ -74,8 +74,8 @@ export default function Cart() {
                         src={product.image}
                         alt={product.title}
                         fill
-                        style={{ objectFit:"contain" }}
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        style={{ objectFit:'contain' }}
+                        sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                       />
                     </div>
                     <div className={styles.titleContainer}>{product.title}</div>
@@ -85,10 +85,10 @@ export default function Cart() {
                         product.quantity > 1 && (
                           <button onClick={() =>  onQuantityMinusClick(product)}>
                             <Image
-                              src="/minus-icon.svg"
+                              src='/minus-icon.svg'
                               width={20}
                               height={20}
-                              alt="Minus icon"
+                              alt='Minus icon'
                             />
                           </button>
                         )
@@ -96,10 +96,10 @@ export default function Cart() {
                       <span>{product.quantity}</span>
                       <button onClick={() => onQuantityPlusClick(product)}>
                         <Image
-                          src="/plus-icon.svg"
+                          src='/plus-icon.svg'
                           width={20}
                           height={20}
-                          alt="Plus icon"
+                          alt='Plus icon'
                         />
                       </button>
                     </div>
@@ -107,10 +107,10 @@ export default function Cart() {
                     <div className={styles.trashContainer}>
                       <button onClick={() => onProductDelete(product)}>
                           <Image
-                            src="/trash-icon.svg"
+                            src='/trash-icon.svg'
                             width={25}
                             height={25}
-                            alt="Trash icon"
+                            alt='Trash icon'
                           />
                       </button>
                     </div>

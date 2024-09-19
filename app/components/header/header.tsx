@@ -23,7 +23,7 @@ export default function Header({ categories }: HeaderProps ) {
         <div className={styles.headerContainer}>
           {
             pathname !== '/' ? (
-              <Link href="/">
+              <Link href='/'>
                 <h3><b>Go to main page</b></h3>
               </Link>
             ) : null
